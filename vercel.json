@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    { "src": "/submit-form", "dest": "app.py" },
+    { "src": "/(.*)", "dest": "/static/$1" }
+  ]
+}
