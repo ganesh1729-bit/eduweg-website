@@ -1,66 +1,66 @@
 from flask import Flask, request, jsonify
-import sqlite3
 import os
+import json
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from datetime import datetime
+import pytz
 
 # Initialize the Flask App
 app = Flask(__name__)
 
-# --- Database Setup ---
-def init_db():
-    # Check if the database file exists
-    if not os.path.exists('leads.db'):
-        print("Creating database...")
-        conn = sqlite3.connect('leads.db')
-        c = conn.cursor()
-        # Create a table to store the contact form submissions
-        c.execute('''
-            CREATE TABLE leads (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                email TEXT NOT NULL,
-                phone TEXT NOT NULL,
-                purpose TEXT NOT NULL,
-                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-            )
-        ''')
-        conn.commit()
-        conn.close()
-        print("Database 'leads.db' and table 'leads' created.")
+# --- Function to send data to Google Sheets ---
+def send_to_google_sheets(data):
+    try:
+        # Load credentials from Vercel Environment Variable
+        creds_json = os.environ.get('GOOGLE_CREDENTIALS')
+        creds_dict = json.loads(creds_json)
+        scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
+                 "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+        creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+        client = gspread.authorize(creds)
 
-# --- Backend Routes ---
-# This route will handle the form submission
+        # Open the sheet and append the row
+        sheet = client.open("EduWeg Leads").sheet1 # Assumes your sheet is named "EduWeg Leads"
+
+        # Get current time in India Standard Time
+        IST = pytz.timezone('Asia/Kolkata')
+        timestamp = datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S')
+
+        row = [timestamp, data.get('name'), data.get('email'), data.get('phone'), data.get('purpose')]
+        sheet.append_row(row)
+        print("Successfully appended to Google Sheet.")
+        return True
+    except Exception as e:
+        print(f"Error sending to Google Sheets: {e}")
+        return False
+
+# --- Main Backend Routes ---
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     try:
         # Get data from the form
-        data = request.get_json()
-        name = data.get('name')
-        email = data.get('email')
-        phone = data.get('country_code') + data.get('phone') # Combine country code and phone
-        purpose = data.get('purpose')
+        form_data = request.get_json()
+        submission_data = {
+            'name': form_data.get('name'),
+            'email': form_data.get('email'),
+            'phone': form_data.get('country_code', '') + form_data.get('phone', ''),
+            'purpose': form_data.get('purpose')
+        }
 
-        # Connect to the database and insert the data
-        conn = sqlite3.connect('leads.db')
-        c = conn.cursor()
-        c.execute("INSERT INTO leads (name, email, phone, purpose) VALUES (?, ?, ?, ?)",
-                  (name, email, phone, purpose))
-        conn.commit()
-        conn.close()
+        # Send data to Google Sheets
+        send_to_google_sheets(submission_data)
 
-        # Return a success message
         return jsonify({'message': 'Form submitted successfully!'}), 200
 
     except Exception as e:
-        # Return an error message if something goes wrong
-        print(f"Error: {e}")
+        print(f"Error in submit_form: {e}")
         return jsonify({'message': 'An error occurred.'}), 500
 
-# This route serves your main webpage
 @app.route('/')
 def home():
     return app.send_static_file('index.html')
 
-# --- Run the App ---
-if __name__ == '__main__':
-    init_db() # Create the database on first run
-    app.run(debug=True) # Run the development server
+@app.route('/<path:path>')
+def all_routes(path):
+     return app.send_static_file(path)
