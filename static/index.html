@@ -428,9 +428,25 @@
             // Contact form submission
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
-if (contactForm && formSuccess) {
+const submitButton = contactForm.querySelector('button[type="submit"]');
+
+if (contactForm && formSuccess && submitButton) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault(); // Prevent the form from reloading the page
+
+        // --- New Validation Logic ---
+        const email = contactForm.querySelector('#email').value;
+
+        // Simple email format check
+        if (!email.includes('@') || !email.includes('.')) {
+            alert('Please enter a valid email address.');
+            return; // Stop the function here
+        }
+        
+        // --- New Button Feedback Logic ---
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
 
         // Get form data
         const formData = new FormData(contactForm);
@@ -445,24 +461,26 @@ if (contactForm && formSuccess) {
         // Send data to the backend
         fetch('/submit-form', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
         })
         .then(response => response.json())
         .then(result => {
             console.log('Success:', result);
-            // Show the success message and reset the form
             formSuccess.classList.remove('hidden');
             contactForm.reset();
-            setTimeout(() => {
-                formSuccess.classList.add('hidden');
-            }, 5000);
         })
         .catch(error => {
             console.error('Error:', error);
             alert('There was an error submitting your form. Please try again.');
+        })
+        .finally(() => {
+            // --- Restore button after submission attempt ---
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
         });
     });
 }
