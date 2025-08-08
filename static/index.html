@@ -126,10 +126,7 @@
                  <div class="flex flex-col md:flex-row-reverse items-center gap-12 max-w-7xl mx-auto">
                     <div class="md:w-1/2 reveal relative">
                         <div id="story-image-container" class="rounded-xl shadow-xl w-full h-96 bg-gray-200 bg-cover bg-center" style="background-image: url('https://placehold.co/600x450/F5F7FA/2D2D2D?text=Our+Story')"></div>
-                        <label for="story-image-upload" class="absolute bottom-4 right-4 bg-white text-charcoal-gray px-4 py-2 rounded-full text-sm font-semibold cursor-pointer btn hover:bg-gray-200">
-                            <i class="fas fa-camera mr-2"></i>Change Photo
-                        </label>
-                        <input type="file" id="story-image-upload" class="hidden" accept="image/*">
+                    
                     </div>
                     <div class="md:w-1/2 reveal">
                         <h2 class="text-3xl md:text-4xl font-bold ew-primary mb-4">Founded by Friends, For Your Future.</h2>
@@ -148,10 +145,9 @@
                     <h2 class="text-3xl md:text-4xl font-bold ew-primary reveal">Transparent Services, Tailored For You</h2>
                     <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto reveal">We specialize in Student Visas and Ausbildung (Apprenticeship) Visas. Start with a free call!</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <div class="flex space-x-8 overflow-x-auto pb-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:space-x-0 md:pb-0"></div>
                     <!-- Service Tier 0 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-ew-cta reveal">
-                        <h3 class="text-2xl font-bold ew-cta mb-4">Strategy Call</h3>
+<div class="bg-white p-8 rounded-xl shadow-lg border-2 border-ew-cta reveal flex-shrink-0 w-4/5 md:w-auto"></div>                        <h3 class="text-2xl font-bold ew-cta mb-4">Strategy Call</h3>
                         <p class="text-2xl font-bold text-charcoal-gray mb-4">FREE</p>
                         <p class="text-gray-600 mb-6 h-24">A 15-minute call to assess your profile, answer your key questions, and suggest the right path.</p>
                         <ul class="space-y-3 text-charcoal-gray">
@@ -161,8 +157,7 @@
                         </ul>
                     </div>
                     <!-- Service Tier 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-200 reveal">
-                        <h3 class="text-2xl font-bold ew-primary mb-4">Final Check</h3>
+<div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-200 reveal flex-shrink-0 w-4/5 md:w-auto"></div>                        <h3 class="text-2xl font-bold ew-primary mb-4">Final Check</h3>
                         <div class="mb-4">
                             <p class="text-2xl font-bold text-gray-700">₹8,000</p>
                             <p class="text-md text-gray-500">€90</p>
@@ -175,8 +170,7 @@
                         </ul>
                     </div>
                     <!-- Service Tier 2 -->
-                    <div class="bg-ew-primary text-white p-8 rounded-xl shadow-2xl transform md:scale-105 reveal">
-                        <span class="bg-ew-cta text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-3 right-6">POPULAR</span>
+<div class="bg-ew-primary text-white p-8 rounded-xl shadow-2xl transform md:scale-105 reveal flex-shrink-0 w-4/5 md:w-auto"></div>                        <span class="bg-ew-cta text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-3 right-6">POPULAR</span>
                         <h3 class="text-2xl font-bold text-white mb-4">Full Guidance</h3>
                         <div class="mb-4">
                             <p class="text-2xl font-bold text-white">₹22,000</p>
@@ -191,8 +185,7 @@
                         </ul>
                     </div>
                     <!-- Service Tier 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-200 reveal">
-                        <h3 class="text-2xl font-bold ew-primary mb-4">Premium</h3>
+<div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-200 reveal flex-shrink-0 w-4/5 md:w-auto"></div>                        <h3 class="text-2xl font-bold ew-primary mb-4">Premium</h3>
                          <div class="mb-4">
                             <p class="text-2xl font-bold text-gray-700">₹35,000</p>
                             <p class="text-md text-gray-500">€390</p>
@@ -219,45 +212,27 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Testimonial 1 -->
                     <div class="bg-soft-gray p-6 rounded-xl shadow-lg reveal" style="background-color: #F5F7FA;">
-                        <div class="relative w-24 h-24 mx-auto -mt-12 group">
-                            <label for="testimonial-upload-1" class="cursor-pointer">
-                                <img id="testimonial-img-1" src="https://placehold.co/100x100/3CBEC9/FFFFFF?text=P" alt="Priya S." class="w-24 h-24 rounded-full border-4 border-white group-hover:opacity-75 transition-opacity">
-                                <div class="absolute inset-0 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <i class="fas fa-camera text-white text-2xl"></i>
-                                </div>
-                            </label>
-                            <input type="file" id="testimonial-upload-1" class="hidden" accept="image/*">
-                        </div>
+                      <div class="relative w-24 h-24 mx-auto -mt-12">
+    <img id="testimonial-img-1" src="https://placehold.co/100x100/3CBEC9/FFFFFF?text=P" alt="Priya S." class="w-24 h-24 rounded-full border-4 border-white">
+</div>
                         <p class="text-gray-600 italic mt-4 mb-4">"EduWeg made the entire process so clear and stress-free. The 'Germany Connect' call was amazing and helped me feel prepared for my arrival in Berlin. Highly recommend!"</p>
                         <p class="font-bold ew-primary text-center">Priya S.</p>
                         <p class="text-sm text-gray-500 text-center">Student, Berlin</p>
                     </div>
                     <!-- Testimonial 2 -->
                     <div class="bg-soft-gray p-6 rounded-xl shadow-lg reveal" style="background-color: #F5F7FA; transition-delay: 100ms;">
-                        <div class="relative w-24 h-24 mx-auto -mt-12 group">
-                            <label for="testimonial-upload-2" class="cursor-pointer">
-                                <img id="testimonial-img-2" src="https://placehold.co/100x100/1F4E79/FFFFFF?text=R" alt="Rohan M." class="w-24 h-24 rounded-full border-4 border-white group-hover:opacity-75 transition-opacity">
-                                <div class="absolute inset-0 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <i class="fas fa-camera text-white text-2xl"></i>
-                                </div>
-                            </label>
-                            <input type="file" id="testimonial-upload-2" class="hidden" accept="image/*">
-                        </div>
+                      <div class="relative w-24 h-24 mx-auto -mt-12">
+    <img id="testimonial-img-2" src="https://placehold.co/100x100/1F4E79/FFFFFF?text=R" alt="Rohan M." class="w-24 h-24 rounded-full border-4 border-white">
+</div>
                         <p class="text-gray-600 italic mt-4 mb-4">"I only used the 'Final Check' service, and it was worth every rupee. They caught a small mistake in my application that could have caused a rejection. Thank you, EduWeg!"</p>
                         <p class="font-bold ew-primary text-center">Rohan M.</p>
                         <p class="text-sm text-gray-500 text-center">Ausbildung Applicant, Munich</p>
                     </div>
                     <!-- Testimonial 3 -->
                     <div class="bg-soft-gray p-6 rounded-xl shadow-lg reveal" style="background-color: #F5F7FA; transition-delay: 200ms;">
-                        <div class="relative w-24 h-24 mx-auto -mt-12 group">
-                            <label for="testimonial-upload-3" class="cursor-pointer">
-                                <img id="testimonial-img-3" src="https://placehold.co/100x100/2ECC71/FFFFFF?text=A" alt="Anjali K." class="w-24 h-24 rounded-full border-4 border-white group-hover:opacity-75 transition-opacity">
-                                <div class="absolute inset-0 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <i class="fas fa-camera text-white text-2xl"></i>
-                                </div>
-                            </label>
-                            <input type="file" id="testimonial-upload-3" class="hidden" accept="image/*">
-                        </div>
+                        <div class="relative w-24 h-24 mx-auto -mt-12">
+    <img id="testimonial-img-3" src="https://placehold.co/100x100/2ECC71/FFFFFF?text=A" alt="Anjali K." class="w-24 h-24 rounded-full border-4 border-white">
+</div>
                         <p class="text-gray-600 italic mt-4 mb-4">"The free consultation itself was so helpful! They were honest and didn't try to sell me anything. I signed up for the full guidance and got my visa without any issues."</p>
                         <p class="font-bold ew-primary text-center">Anjali K.</p>
                         <p class="text-sm text-gray-500 text-center">Student, Hamburg</p>
@@ -388,24 +363,28 @@
                     </ul>
                 </div>
                 <!-- Direct Contact -->
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Get In Touch</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-center justify-center md:justify-start">
-                            <i class="fas fa-phone mr-3 text-ew-accent" style="color:#3CBEC9;"></i>
-                            <span>+91 12345 67890</span>
-                        </li>
-                        <li class="flex items-center justify-center md:justify-start">
-                             <i class="fas fa-envelope mr-3 text-ew-accent" style="color:#3CBEC9;"></i>
-                            <span>contact@eduweg.com</span>
-                        </li>
-                    </ul>
-                    <div class="mt-4 flex justify-center md:justify-start space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white text-2xl transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-white text-2xl transition-colors duration-300"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-300 hover:text-white text-2xl transition-colors duration-300"><i class="fab fa-facebook-square"></i></a>
-                    </div>
-                </div>
+<div>
+    <h4 class="font-bold text-lg mb-4">Get In Touch</h4>
+    <ul class="space-y-3">
+        <li class="flex items-center justify-center md:justify-start">
+            <i class="fas fa-envelope mr-3 text-ew-accent" style="color:#3CBEC9;"></i>
+            <a href="mailto:agarwalganeshjindal825@gmail.com" class="hover:text-white">agarwalganeshjindal825@gmail.com</a>
+        </li>
+        <li class="flex items-center justify-center md:justify-start">
+            <i class="fas fa-phone mr-3 text-ew-accent" style="color:#3CBEC9;"></i>
+            <a href="tel:+917891686825" class="hover:text-white">+91 78916 86825</a>
+        </li>
+        <li class="flex items-center justify-center md:justify-start">
+            <i class="fab fa-whatsapp mr-3 text-ew-accent" style="color:#3CBEC9;"></i>
+            <a href="https://wa.me/917891686825" target="_blank" class="hover:text-white">+91 78916 86825</a>
+        </li>
+    </ul>
+    <div class="mt-4 flex justify-center md:justify-start space-x-4">
+        <a href="#" class="text-gray-300 hover:text-white text-2xl transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-gray-300 hover:text-white text-2xl transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-300 hover:text-white text-2xl transition-colors duration-300"><i class="fab fa-facebook-square"></i></a>
+    </div>
+</div>
             </div>
             <div class="text-center text-gray-400 border-t border-blue-900 mt-8 pt-6">
                 <p>&copy; 2025 EduWeg. All Rights Reserved.</p>
