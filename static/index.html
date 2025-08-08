@@ -425,7 +425,7 @@
                 });
             }
 
-            // Contact form submission
+           // Contact form submission
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
 const submitButton = contactForm.querySelector('button[type="submit"]');
@@ -434,16 +434,30 @@ if (contactForm && formSuccess && submitButton) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault(); // Prevent the form from reloading the page
 
-        // --- New Validation Logic ---
-        const email = contactForm.querySelector('#email').value;
+        // --- PROPER VALIDATION LOGIC ---
+        const nameInput = contactForm.querySelector('#name');
+        const emailInput = contactForm.querySelector('#email');
+        const phoneInput = contactForm.querySelector('#phone');
 
-        // Simple email format check
-        if (!email.includes('@') || !email.includes('.')) {
-            alert('Please enter a valid email address.');
-            return; // Stop the function here
+        // Validation Patterns (Regular Expressions)
+        const namePattern = /^[a-zA-Z\s]+$/; // Allows letters and spaces
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // A standard email pattern
+        const phonePattern = /^\d{10}$/; // Requires exactly 10 digits
+
+        if (!namePattern.test(nameInput.value)) {
+            alert('Please enter a valid name (letters and spaces only).');
+            return; // Stop submission
         }
-        
-        // --- New Button Feedback Logic ---
+        if (!emailPattern.test(emailInput.value)) {
+            alert('Please enter a valid email address.');
+            return; // Stop submission
+        }
+        if (!phonePattern.test(phoneInput.value)) {
+            alert('Please enter a valid 10-digit mobile number.');
+            return; // Stop submission
+        }
+
+        // --- Button Feedback Logic ---
         const originalButtonText = submitButton.textContent;
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
@@ -475,7 +489,7 @@ if (contactForm && formSuccess && submitButton) {
             alert('There was an error submitting your form. Please try again.');
         })
         .finally(() => {
-            // --- Restore button after submission attempt ---
+            // Restore button after submission attempt
             submitButton.textContent = originalButtonText;
             submitButton.disabled = false;
             setTimeout(() => {
