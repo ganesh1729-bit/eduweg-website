@@ -75,22 +75,6 @@
         .faq-item.active .faq-answer { max-height: 200px; }
         .faq-item.active .faq-arrow { transform: rotate(180deg); }
         .faq-arrow { transition: transform 0.3s ease; }
-        
-        /* Hide scrollbar for clean UI */
-        .scrollbar-hide {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none; /* Chrome, Safari and Opera */
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-.scrollbar-hide {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-}
     </style>
 </head>
 <body class="text-charcoal-gray">
@@ -155,149 +139,114 @@
         </section>
         
         <!-- Services Section -->
-      <!-- Services Section -->
-<section id="services" class="py-16 md:py-24 bg-soft-gray" style="background-color: #F5F7FA;">
+       <section id="services" class="py-16 md:py-24 bg-soft-gray" style="background-color: #F5F7FA;">
     <div class="container mx-auto px-6">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold ew-primary reveal">Transparent Services, Tailored For You</h2>
             <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto reveal">We specialize in Student Visas and Ausbildung (Apprenticeship) Visas. Start with a free call!</p>
         </div>
-
-        <!-- Slider Wrapper -->
-        <div id="pricing-slider-wrapper" class="relative">
-            <!-- Slider Container -->
-            <div id="pricing-slider" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
-                
-                <!-- Service Tier 0 -->
-                <div class="flex-shrink-0 w-full md:w-1/4 snap-center p-2">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-ew-cta h-full">
-                        <h3 class="text-2xl font-bold ew-cta mb-4">Strategy Call</h3>
-                        <p class="text-2xl font-bold text-charcoal-gray mb-4">FREE</p>
-                        <p class="text-gray-600 mb-6 h-24">A 15-minute call to assess your profile, answer your key questions, and suggest the right path.</p>
-                        <ul class="space-y-3 text-charcoal-gray">
-                            <li class="flex items-center"><span class="ew-cta mr-2">✔</span>Profile Assessment</li>
-                            <li class="flex items-center"><span class="ew-cta mr-2">✔</span>Key Questions Answered</li>
-                            <li class="flex items-center"><span class="ew-cta mr-2">✔</span>No Strings Attached</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Tier 1 -->
-                <div class="flex-shrink-0 w-full md:w-1/4 snap-center p-2">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-200 h-full">
-                        <h3 class="text-2xl font-bold ew-primary mb-4">Final Check</h3>
-                        <div class="mb-4">
-                            <p class="text-2xl font-bold text-gray-700">₹8,000</p>
-                            <p class="text-md text-gray-500">€90</p>
-                        </div>
-                        <p class="text-gray-600 mb-6 h-24">For those who have done the work but need an expert review before submission.</p>
-                        <ul class="space-y-3 text-charcoal-gray">
-                            <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>SOP/Motivation Letter Review</li>
-                            <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>LOR Structure Check</li>
-                            <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>Final Document Checklist</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Tier 2 -->
-                <div class="flex-shrink-0 w-full md:w-1/4 snap-center p-2">
-                    <div class="bg-ew-primary text-white p-8 rounded-xl shadow-2xl h-full">
-                        <h3 class="text-2xl font-bold text-white mb-4">Full Guidance</h3>
-                        <div class="mb-4">
-                            <p class="text-2xl font-bold text-white">₹22,000</p>
-                            <p class="text-md text-gray-300">€245</p>
-                        </div>
-                        <p class="mb-6 h-24 text-gray-200">Our comprehensive package, guiding you from university selection to final visa file.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>All "Final Check" services</li>
-                            <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>University Shortlisting</li>
-                            <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>Complete Visa File Prep</li>
-                            <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>Visa Interview Prep</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Tier 3 -->
-                <div class="flex-shrink-0 w-full md:w-1/4 snap-center p-2">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-200 h-full">
-                        <h3 class="text-2xl font-bold ew-primary mb-4">Premium</h3>
-                         <div class="mb-4">
-                            <p class="text-2xl font-bold text-gray-700">₹35,000</p>
-                            <p class="text-md text-gray-500">€390</p>
-                        </div>
-                        <p class="text-gray-600 mb-6 h-24">Maximum support, including our unique "Germany Connect" service for post-arrival peace of mind.</p>
-                        <ul class="space-y-3 text-charcoal-gray">
-                           <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>All "Full Guidance" services</li>
-                           <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>APS Certificate Support</li>
-                           <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>Blocked Account Guidance</li>
-                           <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>"Germany Connect" Call</li>
-                        </ul>
-                    </div>
-                </div>
+        
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+    <!-- Pricing cards will be placed here -->
+</div>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-2 border-ew-cta reveal">
+                <h3 class="text-xl md:text-2xl font-bold ew-cta mb-3 md:mb-4">Strategy Call</h3>
+                <p class="text-xl md:text-2xl font-bold text-charcoal-gray mb-3 md:mb-4">FREE</p>
+                <p class="text-gray-600 mb-4 md:mb-6 min-h-[4rem] md:min-h-[6rem]">A 15-minute call to assess your profile, answer your key questions, and suggest the right path.</p>
+                <ul class="space-y-2 md:space-y-3 text-charcoal-gray">
+                    <li class="flex items-center"><span class="ew-cta mr-2">✔</span>Profile Assessment</li>
+                    <li class="flex items-center"><span class="ew-cta mr-2">✔</span>Key Questions Answered</li>
+                    <li class="flex items-center"><span class="ew-cta mr-2">✔</span>No Strings Attached</li>
+                </ul>
             </div>
 
-            <!-- Navigation Buttons -->
-            <button id="pricing-prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md md:hidden">&lt;</button>
-            <button id="pricing-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md md:hidden">&gt;</button>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-t-4 border-gray-200 reveal">
+                <h3 class="text-xl md:text-2xl font-bold ew-primary mb-3 md:mb-4">Final Check</h3>
+                <div class="mb-3 md:mb-4">
+                    <p class="text-xl md:text-2xl font-bold text-gray-700">₹8,000</p>
+                    <p class="text-sm md:text-md text-gray-500">€90</p>
+                </div>
+                <p class="text-gray-600 mb-4 md:mb-6 min-h-[4rem] md:min-h-[6rem]">For those who have done the work but need an expert review before submission.</p>
+                <ul class="space-y-2 md:space-y-3 text-charcoal-gray">
+                    <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>SOP/Motivation Letter Review</li>
+                    <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>LOR Structure Check</li>
+                    <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>Final Document Checklist</li>
+                </ul>
+            </div>
 
-            <!-- Indicator Dots -->
-            <div id="pricing-dots" class="flex justify-center mt-4 space-x-2 md:hidden"></div>
+            <div class="bg-ew-primary text-white p-6 md:p-8 rounded-xl shadow-2xl transform scale-100 md:scale-105 reveal relative">
+                <span class="bg-ew-cta text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-3 right-3 md:right-6">POPULAR</span>
+                <h3 class="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">Full Guidance</h3>
+                <div class="mb-3 md:mb-4">
+                    <p class="text-xl md:text-2xl font-bold text-white">₹22,000</p>
+                    <p class="text-sm md:text-md text-gray-300">€245</p>
+                </div>
+                <p class="mb-4 md:mb-6 min-h-[4rem] md:min-h-[6rem] text-gray-200">Our comprehensive package, guiding you from university selection to final visa file.</p>
+                <ul class="space-y-2 md:space-y-3">
+                    <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>All "Final Check" services</li>
+                    <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>University Shortlisting</li>
+                    <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>Complete Visa File Prep</li>
+                    <li class="flex items-center"><span class="text-ew-cta mr-2">✔</span>Visa Interview Prep</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-t-4 border-gray-200 reveal">
+                <h3 class="text-xl md:text-2xl font-bold ew-primary mb-3 md:mb-4">Premium</h3>
+                 <div class="mb-3 md:mb-4">
+                    <p class="text-xl md:text-2xl font-bold text-gray-700">₹35,000</p>
+                    <p class="text-sm md:text-md text-gray-500">€390</p>
+                </div>
+                <p class="text-gray-600 mb-4 md:mb-6 min-h-[4rem] md:min-h-[6rem]">Maximum support, including our unique "Germany Connect" service for post-arrival peace of mind.</p>
+                <ul class="space-y-2 md:space-y-3 text-charcoal-gray">
+                   <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>All "Full Guidance" services</li>
+                   <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>APS Certificate Support</li>
+                   <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>Blocked Account Guidance</li>
+                   <li class="flex items-center"><span class="ew-accent mr-2" style="color:#3CBEC9;">✔</span>"Germany Connect" Call</li>
+                </ul>
+            </div>
+            
         </div>
     </div>
 </section>
 
         <!-- Testimonials Section -->
-       <section id="reviews" class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold ew-primary reveal">Our Wall of Trust</h2>
-            <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto reveal">We're proud of the students we've helped. Here's what they have to say.</p>
-        </div>
-
-        <div id="reviews-slider-wrapper" class="relative">
-            <div id="reviews-slider" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
-
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center p-2">
-                    <div class="bg-soft-gray p-6 rounded-xl shadow-lg h-full" style="background-color: #F5F7FA;">
-                        <div class="relative w-24 h-24 mx-auto -mt-12">
-                            <img id="testimonial-img-1" src="https://placehold.co/100x100/3CBEC9/FFFFFF?text=P" alt="Priya S." class="w-24 h-24 rounded-full border-4 border-white">
-                        </div>
+        <section id="reviews" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold ew-primary reveal">Our Wall of Trust</h2>
+                    <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto reveal">We're proud of the students we've helped. Here's what they have to say.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-soft-gray p-6 rounded-xl shadow-lg reveal" style="background-color: #F5F7FA;">
+                      <div class="relative w-24 h-24 mx-auto -mt-12">
+    <img id="testimonial-img-1" src="https://placehold.co/100x100/3CBEC9/FFFFFF?text=P" alt="Priya S." class="w-24 h-24 rounded-full border-4 border-white">
+</div>
                         <p class="text-gray-600 italic mt-4 mb-4">"EduWeg made the entire process so clear and stress-free. The 'Germany Connect' call was amazing and helped me feel prepared for my arrival in Berlin. Highly recommend!"</p>
                         <p class="font-bold ew-primary text-center">Priya S.</p>
                         <p class="text-sm text-gray-500 text-center">Student, Berlin</p>
                     </div>
-                </div>
-
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center p-2">
-                    <div class="bg-soft-gray p-6 rounded-xl shadow-lg h-full" style="background-color: #F5F7FA;">
-                        <div class="relative w-24 h-24 mx-auto -mt-12">
-                            <img id="testimonial-img-2" src="https://placehold.co/100x100/1F4E79/FFFFFF?text=R" alt="Rohan M." class="w-24 h-24 rounded-full border-4 border-white">
-                        </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-soft-gray p-6 rounded-xl shadow-lg reveal" style="background-color: #F5F7FA; transition-delay: 100ms;">
+                      <div class="relative w-24 h-24 mx-auto -mt-12">
+    <img id="testimonial-img-2" src="https://placehold.co/100x100/1F4E79/FFFFFF?text=R" alt="Rohan M." class="w-24 h-24 rounded-full border-4 border-white">
+</div>
                         <p class="text-gray-600 italic mt-4 mb-4">"I only used the 'Final Check' service, and it was worth every rupee. They caught a small mistake in my application that could have caused a rejection. Thank you, EduWeg!"</p>
                         <p class="font-bold ew-primary text-center">Rohan M.</p>
                         <p class="text-sm text-gray-500 text-center">Ausbildung Applicant, Munich</p>
                     </div>
-                </div>
-
-                <div class="flex-shrink-0 w-full md:w-1/3 snap-center p-2">
-                    <div class="bg-soft-gray p-6 rounded-xl shadow-lg h-full" style="background-color: #F5F7FA;">
+                    <!-- Testimonial 3 -->
+                    <div class="bg-soft-gray p-6 rounded-xl shadow-lg reveal" style="background-color: #F5F7FA; transition-delay: 200ms;">
                         <div class="relative w-24 h-24 mx-auto -mt-12">
-                            <img id="testimonial-img-3" src="https://placehold.co/100x100/2ECC71/FFFFFF?text=A" alt="Anjali K." class="w-24 h-24 rounded-full border-4 border-white">
-                        </div>
+    <img id="testimonial-img-3" src="https://placehold.co/100x100/2ECC71/FFFFFF?text=A" alt="Anjali K." class="w-24 h-24 rounded-full border-4 border-white">
+</div>
                         <p class="text-gray-600 italic mt-4 mb-4">"The free consultation itself was so helpful! They were honest and didn't try to sell me anything. I signed up for the full guidance and got my visa without any issues."</p>
                         <p class="font-bold ew-primary text-center">Anjali K.</p>
                         <p class="text-sm text-gray-500 text-center">Student, Hamburg</p>
                     </div>
                 </div>
             </div>
-
-            <button id="reviews-prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md">&lt;</button>
-            <button id="reviews-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/50 p-2 rounded-full shadow-md">&gt;</button>
-
-            <div id="reviews-dots" class="flex justify-center mt-4 space-x-2 md:hidden"></div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- FAQ Section -->
         <section id="faq" class="py-16 md:py-24 bg-soft-gray" style="background-color: #F5F7FA;">
@@ -461,102 +410,6 @@
                     link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
                 });
             }
-            // --- Pricing Slider ---
-const pricingSlider = document.getElementById('pricing-slider');
-const pricingPrev = document.getElementById('pricing-prev');
-const pricingNext = document.getElementById('pricing-next');
-const pricingDotsContainer = document.getElementById('pricing-dots');
-
-if (pricingSlider) {
-    const slides = pricingSlider.children;
-    let dots = [];
-
-    // This loop creates a dot for each pricing card
-    for (let i = 0; i < slides.length; i++) {
-        const dot = document.createElement('button');
-        dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-300');
-        dot.addEventListener('click', () => {
-            slides[i].scrollIntoView({ behavior: 'smooth' });
-        });
-        pricingDotsContainer.appendChild(dot);
-        dots.push(dot);
-    }
-
-    // This function checks which slide is visible and updates the dots
-    const updateDots = () => {
-        const scrollLeft = pricingSlider.scrollLeft;
-        const slideWidth = slides[0].offsetWidth;
-        const activeIndex = Math.round(scrollLeft / slideWidth);
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('bg-ew-primary', i === activeIndex);
-        });
-    };
-    
-    pricingSlider.addEventListener('scroll', updateDots);
-    updateDots(); // Update dots on initial load
-
-    // These make the < and > buttons scroll the slider
-    pricingPrev.addEventListener('click', () => {
-        pricingSlider.scrollBy({ left: -pricingSlider.offsetWidth, behavior: 'smooth' });
-    });
-    pricingNext.addEventListener('click', () => {
-        pricingSlider.scrollBy({ left: pricingSlider.offsetWidth, behavior: 'smooth' });
-    });
-}
-
-// --- Reviews Slider ---
-const reviewsSlider = document.getElementById('reviews-slider');
-const reviewsPrev = document.getElementById('reviews-prev');
-const reviewsNext = document.getElementById('reviews-next');
-const reviewsDotsContainer = document.getElementById('reviews-dots');
-
-if (reviewsSlider) {
-    const slides = reviewsSlider.children;
-    let dots = [];
-
-    // This loop creates a dot for each testimonial
-    for (let i = 0; i < slides.length; i++) {
-        const dot = document.createElement('button');
-        dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-300');
-        dot.addEventListener('click', () => {
-            slides[i].scrollIntoView({ behavior: 'smooth' });
-        });
-        reviewsDotsContainer.appendChild(dot);
-        dots.push(dot);
-    }
-
-    // This function checks which testimonial is visible and updates the dots
-    const updateDots = () => {
-        const scrollLeft = reviewsSlider.scrollLeft;
-        const slideWidth = slides[0].offsetWidth;
-        const activeIndex = Math.round(scrollLeft / slideWidth);
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('bg-ew-primary', i === activeIndex);
-        });
-    };
-
-    reviewsSlider.addEventListener('scroll', updateDots);
-    updateDots(); // Update dots on initial load
-
-    // These make the < and > buttons scroll the testimonials
-    reviewsPrev.addEventListener('click', () => {
-        reviewsSlider.scrollBy({ left: -reviewsSlider.offsetWidth, behavior: 'smooth' });
-    });
-    reviewsNext.addEventListener('click', () => {
-        reviewsSlider.scrollBy({ left: reviewsSlider.offsetWidth, behavior: 'smooth' });
-    });
-}
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
 
            // Contact form submission
 const contactForm = document.getElementById('contact-form');
@@ -660,142 +513,6 @@ if (contactForm && formSuccess && submitButton) {
             };
             window.addEventListener('scroll', revealOnScroll);
             revealOnScroll();
-
-            // Pricing slider functionality
-             const pricingSlider = document.getElementById('pricing-slider');
-             const pricingPrev = document.getElementById('pricing-prev');
-             const pricingNext = document.getElementById('pricing-next');
-             const pricingDots = document.getElementById('pricing-dots');
-             
-             if (pricingSlider && pricingPrev && pricingNext && pricingDots) {
-                 const pricingItems = pricingSlider.children;
-                 let currentPricingIndex = 0;
-                
-                // Create dots for pricing slider
-                pricingItems.forEach((_, index) => {
-                    const dot = document.createElement('button');
-                    dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-300');
-                    if (index === 0) dot.classList.add('bg-ew-primary');
-                    dot.addEventListener('click', () => goToPricingSlide(index));
-                    pricingDots.appendChild(dot);
-                });
-                
-                // Navigation functions for pricing slider
-                function goToPricingSlide(index) {
-                    if (index < 0) index = pricingItems.length - 1;
-                    if (index >= pricingItems.length) index = 0;
-                    
-                    currentPricingIndex = index;
-                    const slideWidth = pricingItems[0].offsetWidth;
-                    const slideMargin = parseInt(window.getComputedStyle(pricingItems[0]).marginRight) || 0;
-                    const offset = index * (slideWidth + slideMargin);
-                    
-                    pricingSlider.scrollTo({
-                        left: offset,
-                        behavior: 'smooth'
-                    });
-                    
-                    updatePricingDots();
-                }
-                
-                function updatePricingDots() {
-                    const dots = pricingDots.querySelectorAll('button');
-                    dots.forEach((dot, index) => {
-                        if (index === currentPricingIndex) {
-                            dot.classList.remove('bg-gray-300');
-                            dot.classList.add('bg-ew-primary');
-                        } else {
-                            dot.classList.remove('bg-ew-primary');
-                            dot.classList.add('bg-gray-300');
-                        }
-                    });
-                }
-                
-                // Event listeners for pricing slider
-                pricingPrev.addEventListener('click', () => goToPricingSlide(currentPricingIndex - 1));
-                pricingNext.addEventListener('click', () => goToPricingSlide(currentPricingIndex + 1));
-                
-                // Handle scroll events for pricing slider
-                pricingSlider.addEventListener('scroll', () => {
-                    const slideWidth = pricingItems[0].offsetWidth;
-                    const slideMargin = parseInt(window.getComputedStyle(pricingItems[0]).marginRight) || 0;
-                    const scrollPosition = pricingSlider.scrollLeft;
-                    
-                    const newIndex = Math.round(scrollPosition / (slideWidth + slideMargin));
-                    if (newIndex !== currentPricingIndex) {
-                        currentPricingIndex = newIndex;
-                        updatePricingDots();
-                    }
-                });
-            }
-            
-            // Testimonials slider functionality
-            const testimonialsSlider = document.getElementById('testimonials-slider');
-            const testimonialsPrev = document.getElementById('testimonials-prev');
-            const testimonialsNext = document.getElementById('testimonials-next');
-            const testimonialsDots = document.getElementById('testimonials-dots');
-            
-            if (testimonialsSlider && testimonialsPrev && testimonialsNext && testimonialsDots) {
-                const testimonialItems = testimonialsSlider.querySelectorAll('> div');
-                let currentTestimonialIndex = 0;
-                
-                // Create dots for testimonials slider
-                testimonialItems.forEach((_, index) => {
-                    const dot = document.createElement('button');
-                    dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-300');
-                    if (index === 0) dot.classList.add('bg-ew-primary');
-                    dot.addEventListener('click', () => goToTestimonialSlide(index));
-                    testimonialsDots.appendChild(dot);
-                });
-                
-                // Navigation functions for testimonials slider
-                function goToTestimonialSlide(index) {
-                    if (index < 0) index = testimonialItems.length - 1;
-                    if (index >= testimonialItems.length) index = 0;
-                    
-                    currentTestimonialIndex = index;
-                    const slideWidth = testimonialItems[0].offsetWidth;
-                    const slideMargin = parseInt(window.getComputedStyle(testimonialItems[0]).marginRight) || 0;
-                    const offset = index * (slideWidth + slideMargin);
-                    
-                    testimonialsSlider.scrollTo({
-                        left: offset,
-                        behavior: 'smooth'
-                    });
-                    
-                    updateTestimonialDots();
-                }
-                
-                function updateTestimonialDots() {
-                    const dots = testimonialsDots.querySelectorAll('button');
-                    dots.forEach((dot, index) => {
-                        if (index === currentTestimonialIndex) {
-                            dot.classList.remove('bg-gray-300');
-                            dot.classList.add('bg-ew-primary');
-                        } else {
-                            dot.classList.remove('bg-ew-primary');
-                            dot.classList.add('bg-gray-300');
-                        }
-                    });
-                }
-                
-                // Event listeners for testimonials slider
-                testimonialsPrev.addEventListener('click', () => goToTestimonialSlide(currentTestimonialIndex - 1));
-                testimonialsNext.addEventListener('click', () => goToTestimonialSlide(currentTestimonialIndex + 1));
-                
-                // Handle scroll events for testimonials slider
-                testimonialsSlider.addEventListener('scroll', () => {
-                    const slideWidth = testimonialItems[0].offsetWidth;
-                    const slideMargin = parseInt(window.getComputedStyle(testimonialItems[0]).marginRight) || 0;
-                    const scrollPosition = testimonialsSlider.scrollLeft;
-                    
-                    const newIndex = Math.round(scrollPosition / (slideWidth + slideMargin));
-                    if (newIndex !== currentTestimonialIndex) {
-                        currentTestimonialIndex = newIndex;
-                        updateTestimonialDots();
-                    }
-                });
-            }
 
             // Generic function to set up image uploads
             function setupImageUpload(inputId, imageElementId) {
